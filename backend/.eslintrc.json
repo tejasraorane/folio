@@ -1,0 +1,32 @@
+{
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
+    ],
+    "globals": {
+        "Atomics": "readonly",
+        "SharedArrayBuffer": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+        "quotes": ["error", "single"],
+        "semi": ["error", "never"],
+        "camelcase": ["error", {"allow": ["\\w+V\\d+_\\d+"], "properties": "never" }],
+        "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": true }],
+        "no-console" : "error",
+        "indent": ["error", 4],
+        "no-undef": "off",
+        "no-prototype-builtins": "off",
+        "no-useless-catch": "off",
+        "eol-last": ["error", "always"]
+    }
+}
